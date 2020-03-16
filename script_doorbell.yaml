@@ -1,0 +1,111 @@
+  doorbell:
+    sequence:
+      - service: script.turn_on
+        data:
+          entity_id:
+            - script.doorbell_audio
+            - script.doorbell_notifications
+            - script.doorbell_snapshot
+            - script.doorbell_lights
+
+  doorbell_audio:
+    sequence:
+      - service: tts.google_say
+        data_template:
+          entity_id:
+            - media_player.living_room_speaker
+            - media_player.nuc_office
+            - media_player.dashboard_entryway
+            - media_player.peter_bedroom_display
+            - media_plauer.bathroom_speaker
+            - media_player.office_speaker
+          message: >
+            "Someone is at the door."   
+      
+  doorbell_notifications:
+    sequence:
+      - service: notify.notifier_name_pixel
+        data_template:
+          title: "Ding dong!"
+          message: "Nokon ringde på døra."
+          data:
+            url: "https://your_nabu_casa_url.ui.nabu.casa/lovelace/your_desired_lovelace_page"
+            actions:
+              - action: "open_door"
+                title: "Slepp inn"
+
+
+  doorbell_snapshot:
+    sequence:
+      - service: camera.snapshot
+        data:
+          entity_id: camera.doorbell_camera
+          filename: '/config/www/cam_captures/doorbell/doorbell_{{ now ().year }}_{{ now ().month }}_{{ now ().day }}_{{ now ().hour }}_{{ now ().minute }}.jpg'
+      - data_template:
+          entity_id: camera.saved_image
+          file_path: '/config/www/cam_captures/doorbell/doorbell_{{ now ().year }}_{{ now ().month }}_{{ now ().day }}_{{ now ().hour }}_{{ now ().minute }}.jpg'
+        service: camera.local_file_update_file_path 
+
+# Make selected lights blink blue then return back to normal
+  doorbell_lights:
+    sequence:
+      - service: scene.create
+        data:
+          scene_id: before_doorbell
+          snapshot_entities:
+            - light.living_room_chill_lamp
+            - light.living_room_fridge_lamp
+            - light.living_room_ceiling_led_strip_wled
+            - light.living_room_kitchen_strip
+            - light.entrance_lamp
+            - light.bathroom_lamp
+            - light.bathroom_toilet_paper
+            - light.havard_bed
+            - light.peter_desk
+      - service: light.turn_on
+        data:
+          color_name: blue
+          entity_id: 
+            - light.living_room_chill_lamp
+            - light.living_room_fridge_lamp
+            - light.living_room_ceiling_led_strip_wled
+            - light.living_room_kitchen_strip
+            - light.entrance_lamp
+            - light.bathroom_lamp
+            - light.bathroom_toilet_paper
+            - light.havard_bed
+            - light.peter_desk
+      - delay:
+          milliseconds: 500
+      - service: light.turn_off
+        data:
+          entity_id: 
+            - light.living_room_chill_lamp
+            - light.living_room_fridge_lamp
+            - light.living_room_ceiling_led_strip_wled
+            - light.living_room_kitchen_strip
+            - light.entrance_lamp
+            - light.bathroom_lamp
+            - light.bathroom_toilet_paper
+            - light.havard_bed
+            - light.peter_desk
+      - delay:
+          milliseconds: 200
+      - service: light.turn_on
+        data:
+          color_name: blue
+          entity_id: 
+            - light.living_room_chill_lamp
+            - light.living_room_fridge_lamp
+            - light.living_room_ceiling_led_strip_wled
+            - light.living_room_kitchen_strip
+            - light.entrance_lamp
+            - light.bathroom_lamp
+            - light.bathroom_toilet_paper
+            - light.havard_bed
+            - light.peter_desk
+      - delay:
+          milliseconds: 500
+      - service: scene.turn_on
+        data:
+          entity_id: scene.before_doorbell
