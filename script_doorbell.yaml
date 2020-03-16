@@ -1,3 +1,4 @@
+# Main script triggering all the other script
   doorbell:
     sequence:
       - service: script.turn_on
@@ -8,6 +9,7 @@
             - script.doorbell_snapshot
             - script.doorbell_lights
 
+# TTS to all the Nest Homes
   doorbell_audio:
     sequence:
       - service: tts.google_say
@@ -22,6 +24,7 @@
           message: >
             "Someone is at the door."   
       
+# Send notification to phones
   doorbell_notifications:
     sequence:
       - service: notify.notifier_name_pixel
@@ -34,7 +37,7 @@
               - action: "open_door"
                 title: "Slepp inn"
 
-
+# Take a snapshot of camera and save it
   doorbell_snapshot:
     sequence:
       - service: camera.snapshot
