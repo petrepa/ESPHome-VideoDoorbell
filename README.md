@@ -22,7 +22,7 @@ Affordable and easy to make video doorbell for [Home Assistant](https://www.home
 | 12V PSU                      | idk     | I'm sure you have something laying around.      |
 | 3.3V PSU                     | idk     |                                                 |
 
-Since I ended up having much of what I needed already laying around, I do not have a completely full bill of materials. But I 16$ + some idk = approx 20$?
+Since I ended up having much of what I needed already laying around, I do not have a completely full bill of materials. But 16$ + some idk = approx 20$? 
 
 ## How
 - Flash your ESP32. [Here is my ESPHome code](https://github.com/petrepa/ESPHome-Doorbell/blob/master/esphome_doorbell.yaml)
