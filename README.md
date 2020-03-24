@@ -3,7 +3,7 @@ Affordable and easy to make video doorbell for [Home Assistant](https://www.home
 
 <img src="Images/finished.jpg" width="100%">
 
-### Featrues:
+### Features:
 - No cloud services needed
 - Made with [ESPHome](https://www.esphome.io) which makes it easy to code and modify for your needs
 - Illuminated button which makes it easy to see where to press
