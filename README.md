@@ -3,6 +3,9 @@ Affordable and easy to make video doorbell for [Home Assistant](https://www.home
 
 <img src="Images/finished.jpg" width="100%">
 
+<a href="https://www.buymeacoffee.com/petrepa" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+
+
 ### Features:
 - No cloud services needed
 - Made with [ESPHome](https://www.esphome.io) which makes it easy to code and modify for your needs
