@@ -117,18 +117,18 @@ display:
     address: 0x3C
     id: doorbell_display
     pages:
-	# Name page
+    # Name page
       - id: name_page
         lambda: |-
           it.print(34, 0, id(tnr1), "Peter");
           it.print(29, 20, id(tnr1), "Marcus");
           it.print(8, 43, id(tnr1), "Havard Olai");
-	# Ding Dong page
+    # Ding Dong page
       - id: ding_page
         lambda: |-
             it.print(64, 0, id(tnr2), TextAlign::TOP_CENTER, "DING");
             it.print(64, 64, id(tnr2), TextAlign::BASELINE_CENTER, "DONG");
-	# Welcome in page
+    # Welcome in page
       - id: come_in_page
         lambda: |-
             it.print(64, 0, id(tnr2), TextAlign::TOP_CENTER, "KOM");
