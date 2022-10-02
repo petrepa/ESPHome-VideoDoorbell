@@ -1,4 +1,5 @@
 # ESPHome-Doorbell
+
 Affordable and easy to make video doorbell for [Home Assistant](https://www.home-assistant.io) using [ESPHome](https://www.esphome.io)!
 
 <img src="Images/finished.jpg" width="100%">
@@ -7,6 +8,7 @@ Affordable and easy to make video doorbell for [Home Assistant](https://www.home
 
 
 ### Features:
+
 - No cloud services needed
 - Made with [ESPHome](https://www.esphome.io) which makes it easy to code and modify for your needs
 - Illuminated button which makes it easy to see where to press
@@ -16,6 +18,7 @@ Affordable and easy to make video doorbell for [Home Assistant](https://www.home
 - Other powerful possibilities with Home Assisntant Core
 
 ## Parts needed
+
 | Part                         | Price   | Comment                                         |
 |------------------------------|---------|-------------------------------------------------|
 | LILYGO TTGO T-Camera ESP32   | 15$     | Get the fisheye option!                         |
