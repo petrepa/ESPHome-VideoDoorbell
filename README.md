@@ -32,7 +32,9 @@ Since I ended up having much of what I needed already laying around, I do not ha
 
 ## How
 - Flash your ESP32. [Here is my ESPHome code](https://github.com/petrepa/ESPHome-Doorbell/blob/master/esphome_doorbell.yaml)
-- Print the parts. [Thingiverse](https://www.thingiverse.com/thing:4227174)
+- Print the parts. 
+  - [Printables](https://www.printables.com/model/222620-ttgo-t-camera-video-doorbell)
+  - [Thingiverse](https://www.thingiverse.com/thing:4227174)
 - Solder the connections
 - Assemble
 
