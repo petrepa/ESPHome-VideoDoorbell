@@ -71,6 +71,10 @@ The 3D-printed parts is not a finalized version, and should be improved. I welco
 
 This revision of the ESPHome-VideoDoorbell is more of a proof of concept. All the pictures were taken the summer of 2019, and the doorbell has survived the Norwegian winter in Trondheim untill now. I haven't even fastened the front piece to the back piece, but it has still survived.
 
+## Alternative cases
+Some cool people have been remixing and created alternative versions of my quick and dirty case. Check them out!
+- [ESPHome Doorbell (Rounded) by Coedy](https://www.thingiverse.com/thing:4665520)
+- [ESP32 Video Doorbell with Display by TheDuffman85](https://www.thingiverse.com/thing:5988234)
 
 ### Things to improve
 - 3D models should be improved. The back piece should have room for threaded inserts.
