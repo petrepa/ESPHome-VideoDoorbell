@@ -14,8 +14,8 @@ Affordable and easy to make video doorbell for [Home Assistant](https://www.home
 - Illuminated button which makes it easy to see where to press
 - Display which can display your households name or anything really
 - Fisheye lens which gives a wide feild of view
-- Native camera stream into Home Assistant Core
-- Other powerful possibilities with Home Assisntant Core
+- Native camera stream into Home Assistant
+- Other powerful possibilities with Home Assistant
 
 ## Parts needed
 
